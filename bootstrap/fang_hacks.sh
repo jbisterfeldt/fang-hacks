@@ -178,6 +178,9 @@ else
   true
 fi
 
+# update password from shitty default
+echo -e "ismart12\n$SET_ROOT_PASS\n$SET_ROOT_PASS" | passwd root
+
 logmsg "Running startup scripts"
 run-parts "$HACKS_HOME/etc/scripts"
 logmsg "Finished"
